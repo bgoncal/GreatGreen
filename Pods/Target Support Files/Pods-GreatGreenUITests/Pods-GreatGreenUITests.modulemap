@@ -1,0 +1,6 @@
+framework module Pods_GreatGreenUITests {
+  umbrella header "Pods-GreatGreenUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

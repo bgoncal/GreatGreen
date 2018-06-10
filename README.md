@@ -5,7 +5,7 @@ Product List App Example using MVVM
 
 - pod install
 
-#3rd Part libs
+#3rd-Party libs
 
 - Alamofire (Http Requests) 
 - Cosmos (Rating indicator) 

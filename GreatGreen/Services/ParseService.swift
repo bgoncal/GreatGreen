@@ -16,18 +16,16 @@ class ParseService {
         self.decoder = decoder
     }
     
-    func parse<T: Codable>(data: Data?, objectType: T) -> T? {
-        guard let responseData = data,
-            let data = String(data: responseData, encoding: .utf8),
-            let jsonData = data.data(using: .utf8) else {
-                return nil
+    func parse<T: Codable>(data: Data, objectType: T) -> T? {
+        guard let data = String(data: data, encoding: .utf8), let jsonData = data.data(using: .utf8) else {
+            return nil
         }
         do {
             let obj = try self.decoder.decode(T.self, from: jsonData)
             return obj
         } catch (let err) {
             print(err)
-           return nil
         }
+        return nil
     }
 }

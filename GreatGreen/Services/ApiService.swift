@@ -15,14 +15,15 @@ class ApiService {
         return General.configuration["baseUrl"] as! String
     }()
     
-    func get(url: String, completion: @escaping (HttpResponses, _ data: Data?) -> Void) {
+    func get(url: String, completion: @escaping (HttpResponses, _ data: Data) -> Void) {
         let url = baseUrl + url
         Alamofire.request(url).validate().responseJSON { response in
-            guard response.result.isSuccess else {
-                completion(.fail, nil)
+            if response.result.isSuccess, let data = response.data {
+                completion(.success, data)
+            } else {
+                completion(.fail, Data())
                 return
             }
-            completion(.success, response.data)
         }
     }
 }

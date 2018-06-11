@@ -44,7 +44,6 @@ class ProductService {
             } else {
                 completion(.fail, nil, pageCount, actualPage)
             }
-            
         }
     }
     

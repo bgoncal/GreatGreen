@@ -35,6 +35,10 @@ class StoreListViewController: BaseViewController {
         customFlowLayout.setup(numberOfColumns: numberOfColumns)
         productsCollection.collectionViewLayout = customFlowLayout
     }
+    
+    @IBAction func refresh(_ sender: Any) {
+        viewModel.getProductsPaginated()
+    }
 }
 
 extension StoreListViewController: StoreListDelegate {

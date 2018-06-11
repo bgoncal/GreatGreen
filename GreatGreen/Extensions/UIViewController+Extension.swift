@@ -22,7 +22,7 @@ extension UIViewController {
     
     @objc func showError() {
         HUD.hide()
-        HUD.flash(.label("Try Again"))
+        HUD.flash(.label("Oops... Please try again"))
     }
     
     func hideKeyboardWhenTappedAround() {

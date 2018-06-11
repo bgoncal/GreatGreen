@@ -137,6 +137,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Products" id="ivy-I7-nhM">
                         <barButtonItem key="backBarButtonItem" title="Back" id="7IO-3J-Mwn"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="NBx-Xo-K6i">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="B2X-v1-hkn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="productsCollection" destination="Q28-gI-8zK" id="2fU-ez-pbF"/>
@@ -159,7 +165,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opc-5u-8hf" customClass="CardView" customModule="GreatGreen" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="355" height="800"/>
+                                        <rect key="frame" x="10" y="10" width="355" height="650"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBm-UM-QaR">
                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="200"/>
@@ -301,7 +307,7 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJq-rg-QXX">
-                                                <rect key="frame" x="10" y="316" width="335" height="56"/>
+                                                <rect key="frame" x="10" y="574" width="335" height="56"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tid-CJ-zeh">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="56"/>

@@ -35,8 +35,10 @@ class StoreListViewModel {
                 self.pageCount = pageCount
                 self.delegate.reloadCollection()
                 self.delegate.hideLoader()
-            } else {
+            } else if response == .fail {
                 self.delegate.showError()
+            } else {
+                self.delegate.hideLoader()
             }
         }
     }

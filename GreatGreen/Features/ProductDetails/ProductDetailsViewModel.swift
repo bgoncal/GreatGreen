@@ -34,7 +34,9 @@ class ProductDetailsViewModel {
                 self.delegate.hideLoader()
             } else if response == .fail {
                 self.delegate.showError()
-            } 
+            } else {
+                self.delegate.hideLoader()
+            }
         }
     }
     

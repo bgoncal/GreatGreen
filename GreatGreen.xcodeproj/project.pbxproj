@@ -27,7 +27,6 @@
 		9D2A2D5E20CA665700902A5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A2D5D20CA665700902A5A /* CardView.swift */; };
 		9D2A2D6020CA678A00902A5A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A2D5F20CA678A00902A5A /* ImageCollectionViewCell.swift */; };
 		9D2A2D6520CA732600902A5A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A2D6420CA732600902A5A /* String+Extension.swift */; };
-		9D4EA00D20CA93C400A420C0 /* NSNotification+Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EA00C20CA93C400A420C0 /* NSNotification+Name+Extension.swift */; };
 		9DE1FDED20CABB2B009E1A19 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE1FDEC20CABB2B009E1A19 /* ProductService.swift */; };
 		9DE1FDF020CACF67009E1A19 /* ProductsServicesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE1FDEF20CACF67009E1A19 /* ProductsServicesMock.swift */; };
 		9DE1FDF820CAE903009E1A19 /* ApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE1FDF720CAE903009E1A19 /* ApiServiceMock.swift */; };
@@ -102,7 +101,6 @@
 		9D2A2D5D20CA665700902A5A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9D2A2D5F20CA678A00902A5A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9D2A2D6420CA732600902A5A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		9D4EA00C20CA93C400A420C0 /* NSNotification+Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Name+Extension.swift"; sourceTree = "<group>"; };
 		9DE1FDEC20CABB2B009E1A19 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		9DE1FDEE20CACF66009E1A19 /* GreatGreenTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GreatGreenTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9DE1FDEF20CACF67009E1A19 /* ProductsServicesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServicesMock.swift; sourceTree = "<group>"; };
@@ -283,7 +281,6 @@
 				9D2A2D4F20CA471F00902A5A /* UIImageView+Extension.swift */,
 				9D2A2D5720CA5CBE00902A5A /* UIColor+Extension.swift */,
 				9D2A2D6420CA732600902A5A /* String+Extension.swift */,
-				9D4EA00C20CA93C400A420C0 /* NSNotification+Name+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -610,7 +607,6 @@
 				9D2A2D4020CA30E100902A5A /* ApiService.swift in Sources */,
 				9DE1FE0020CCD606009E1A19 /* ProductDetailsDelegate.swift in Sources */,
 				9D2A2D4220CA313C00902A5A /* StoreListViewModel.swift in Sources */,
-				9D4EA00D20CA93C400A420C0 /* NSNotification+Name+Extension.swift in Sources */,
 				9DE1FDFE20CCD5F4009E1A19 /* StoreListDelegate.swift in Sources */,
 				9D2A2D0B20CA29E300902A5A /* AppDelegate.swift in Sources */,
 			);

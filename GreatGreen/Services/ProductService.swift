@@ -30,20 +30,18 @@ class ProductService {
     func getProducts(pageCount: Int, actualPage: Int, actualProductList: [ProductList.Product],
                      completion: @escaping (HttpResponses, [ProductList.Product]?, _ pageCount: Int, _ actualPage: Int) -> Void) {
         
-        var actualProductList = actualProductList
-        
         if actualPage > pageCount {
             completion(.neutral, nil, pageCount, actualPage)
             return
         }
+        var actualProductList = actualProductList
         api.get(url: String(productsListPath + String(actualPage))) { (response, data) in
             if let productsList = self.parser.parse(data: data, objectType: self.productListObj), response != .fail {
                 actualProductList += productsList.products!
                 completion(.success, actualProductList, productsList.pageCount ?? 1, actualPage + 1)
                 return
-            } else {
-                completion(.fail, nil, pageCount, actualPage)
             }
+            completion(.fail, nil, pageCount, actualPage)
         }
     }
     
@@ -52,9 +50,9 @@ class ProductService {
         api.get(url: productPath + String(productId)) { (response, data) in
             if let productDetails = self.parser.parse(data: data, objectType: self.productDetailsObj), response != .fail {
                 completion(.success, productDetails.product)
-            } else {
-                completion(.fail, nil)
+                return
             }
+            completion(.fail, nil)
         }
     }
 }

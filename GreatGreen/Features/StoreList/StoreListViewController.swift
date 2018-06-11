@@ -41,12 +41,14 @@ class StoreListViewController: BaseViewController {
     }
 }
 
+// MARK: - Store Delegate
 extension StoreListViewController: StoreListDelegate {
     @objc func reloadCollection() {
         productsCollection.reloadData()
     }
 }
 
+// MARK: - Search Bar
 extension StoreListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let query = searchBar.text {
@@ -55,6 +57,7 @@ extension StoreListViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: - Collection View
 extension StoreListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

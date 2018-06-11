@@ -24,6 +24,7 @@ class StoreListViewModel {
         self.filteredProducts = products
     }
     
+    // MARK: - Products
     func getProductsPaginated() {
         delegate.showLoader()
         productService.getProducts(pageCount: pageCount, actualPage: actualPage, actualProductList: products) { (response, productList, pageCount, actualPage) in
@@ -40,6 +41,7 @@ class StoreListViewModel {
         }
     }
     
+    // MARK: - Filter
     func filterProducts(query: String) {
         if query.isEmpty {
             filteredProducts = products

@@ -46,6 +46,7 @@ class ProductDetailsViewController: BaseViewController {
     }
 }
 
+// MARK: - Product Delegate
 extension ProductDetailsViewController: ProductDetailsDelegate {
     @objc func reloadCollection() {
         setupContent()
@@ -53,6 +54,7 @@ extension ProductDetailsViewController: ProductDetailsDelegate {
     }
 }
 
+// MARK: - CollectionView
 extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.product.productImages?.count ?? 0

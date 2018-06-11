@@ -26,6 +26,7 @@ class ProductService {
         self.productDetailsObj = productDetailsObj
     }
     
+    // MARK: - Product List
     func getProducts(pageCount: Int, actualPage: Int, actualProductList: [ProductList.Product],
                      completion: @escaping (HttpResponses, [ProductList.Product]?, _ pageCount: Int, _ actualPage: Int) -> Void) {
         
@@ -47,6 +48,7 @@ class ProductService {
         }
     }
     
+    // MARK: - Product Details
     func getProductDetails(productId: Int, completion: @escaping (HttpResponses, ProductList.Product?) -> Void) {
         api.get(url: productPath + String(productId)) { (response, data) in
             if let productDetails = self.parser.parse(data: data, objectType: self.productDetailsObj), response != .fail {

@@ -16,6 +16,7 @@ class BaseViewController: UIViewController {
         setupBarStyle()
     }
     
+    // MARK: - Style
     func setupBarStyle() {
         let navBar = navigationController?.navigationBar
         let navBarTextAttr = [NSAttributedStringKey.foregroundColor: UIColor.white]

@@ -32,9 +32,9 @@ class ProductDetailsViewModel {
                 self.product = product
                 self.delegate.reloadCollection()
                 self.delegate.hideLoader()
-            } else {
+            } else if response == .fail {
                 self.delegate.showError()
-            }
+            } 
         }
     }
     

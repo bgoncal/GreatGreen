@@ -15,7 +15,7 @@ class StoreListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productPrice: UILabel!
     let currency = General.currency
     
-    func setup(product: ProductList.Product) {
+    func setup(product: Product) {
         productName.text = product.productName
         if let image = product.productImage {
             productImage.downloadedFrom(link: image)

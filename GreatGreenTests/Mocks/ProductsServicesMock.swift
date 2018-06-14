@@ -13,7 +13,7 @@ class ProductServiceMock: ProductService {
     
     var shouldFail = false
     
-    override func getProductDetails(productId: Int, completion: @escaping (HttpResponses, ProductList.Product?) -> Void) {
+    override func getProductDetails(productId: Int, completion: @escaping (HttpResponses, Product?) -> Void) {
         if shouldFail {
             completion(.fail, nil)
         } else {
@@ -21,7 +21,7 @@ class ProductServiceMock: ProductService {
         }
     }
     
-    override func getProducts(pageCount: Int, actualPage: Int, actualProductList: [ProductList.Product], completion: @escaping (HttpResponses, [ProductList.Product]?, Int, Int) -> Void) {
+    override func getProducts(pageCount: Int, actualPage: Int, actualProductList: [Product], completion: @escaping (HttpResponses, [Product]?, Int, Int) -> Void) {
         if shouldFail {
             completion(.fail, nil, 1, 1)
         } else {

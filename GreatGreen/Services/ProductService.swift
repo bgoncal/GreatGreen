@@ -12,11 +12,11 @@ class ProductService {
     
     let api: ApiService
     let decoder: JSONDecoder
-    let productPath = "/product/"
-    let productsListPath = "/search?query=apple&page="
     let parser: ParseService
     let productListObj: ProductList
     let productDetailsObj: ProductDetails
+    let productPath = General.configuration["productDetailsPath"] as! String
+    let productsListPath = General.configuration["productListPath"] as! String
     
     init(api: ApiService, decoder: JSONDecoder, parser: ParseService, productListObj: ProductList, productDetailsObj: ProductDetails) {
         self.api = api
@@ -27,8 +27,8 @@ class ProductService {
     }
     
     // MARK: - Product List
-    func getProducts(pageCount: Int, actualPage: Int, actualProductList: [ProductList.Product],
-                     completion: @escaping (HttpResponses, [ProductList.Product]?, _ pageCount: Int, _ actualPage: Int) -> Void) {
+    func getProducts(pageCount: Int, actualPage: Int, actualProductList: [Product],
+                     completion: @escaping (HttpResponses, [Product]?, _ pageCount: Int, _ actualPage: Int) -> Void) {
         
         if actualPage > pageCount {
             completion(.neutral, nil, pageCount, actualPage)
@@ -46,7 +46,7 @@ class ProductService {
     }
     
     // MARK: - Product Details
-    func getProductDetails(productId: Int, completion: @escaping (HttpResponses, ProductList.Product?) -> Void) {
+    func getProductDetails(productId: Int, completion: @escaping (HttpResponses, Product?) -> Void) {
         api.get(url: productPath + String(productId)) { (response, data) in
             if let productDetails = self.parser.parse(data: data, objectType: self.productDetailsObj), response != .fail {
                 completion(.success, productDetails.product)

@@ -11,13 +11,13 @@ import Foundation
 class StoreListViewModel {
     
     let productService: ProductService
-    var products: [ProductList.Product]
-    var filteredProducts: [ProductList.Product]
+    var products: [Product]
+    var filteredProducts: [Product]
     let delegate: StoreListDelegate
     var pageCount = 1
     var actualPage = 1
     
-    init(productService: ProductService, products: [ProductList.Product], delegate: StoreListDelegate) {
+    init(productService: ProductService, products: [Product], delegate: StoreListDelegate) {
         self.productService = productService
         self.products = products
         self.delegate = delegate

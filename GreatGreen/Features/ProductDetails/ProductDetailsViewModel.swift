@@ -10,12 +10,12 @@ import Foundation
 
 class ProductDetailsViewModel {
 
-    var product: ProductList.Product
+    var product: Product
     let productService: ProductService
     let delegate: ProductDetailsDelegate
     let currency = General.currency
     
-    init(product: ProductList.Product, productService: ProductService, delegate: ProductDetailsDelegate) {
+    init(product: Product, productService: ProductService, delegate: ProductDetailsDelegate) {
         self.product = product
         self.productService = productService
         self.delegate = delegate

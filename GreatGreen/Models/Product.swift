@@ -16,38 +16,6 @@ struct ProductList: Codable {
     let pageCount: Int?
     let products: [Product]?
     
-    struct Product: Codable {
-        let productId: Int
-        let productName: String
-        let productText: String?
-        let productImage: String?
-        let reviewInformation: ReviewInformation?
-        let productImages: [String]?
-        let salesPriceIncVat: Float
-        
-        enum CodingKeys : String, CodingKey {
-            case productId
-            case productName
-            case productText
-            case productImage
-            case reviewInformation
-            case productImages
-            case salesPriceIncVat
-        }
-        
-        struct ReviewInformation: Codable {
-            let reviewSummary: ReviewSummary
-            
-            enum CodingKeys : String, CodingKey {
-                case reviewSummary
-            }
-            
-            struct ReviewSummary: Codable {
-                let reviewAverage: Double
-            }
-        }
-    }
-    
     enum CodingKeys : String, CodingKey {
         case currentPage
         case pageSize
@@ -57,8 +25,40 @@ struct ProductList: Codable {
     }
 }
 
+struct Product: Codable {
+    let productId: Int
+    let productName: String
+    let productText: String?
+    let productImage: String?
+    let reviewInformation: ReviewInformation?
+    let productImages: [String]?
+    let salesPriceIncVat: Float
+    
+    enum CodingKeys : String, CodingKey {
+        case productId
+        case productName
+        case productText
+        case productImage
+        case reviewInformation
+        case productImages
+        case salesPriceIncVat
+    }
+}
+
+struct ReviewInformation: Codable {
+    let reviewSummary: ReviewSummary
+    
+    enum CodingKeys : String, CodingKey {
+        case reviewSummary
+    }
+    
+    struct ReviewSummary: Codable {
+        let reviewAverage: Double
+    }
+}
+
 struct ProductDetails: Codable {
-    let product: ProductList.Product?
+    let product: Product?
     
     enum CodingKeys : String, CodingKey {
         case product

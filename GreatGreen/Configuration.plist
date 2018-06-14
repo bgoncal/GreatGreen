@@ -6,5 +6,9 @@
 	<string>€</string>
 	<key>baseUrl</key>
 	<string>https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment</string>
+	<key>productDetailsPath</key>
+	<string>/product/</string>
+	<key>productListPath</key>
+	<string>/search?query=apple&amp;page=</string>
 </dict>
 </plist>

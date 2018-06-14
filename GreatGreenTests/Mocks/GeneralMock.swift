@@ -11,7 +11,7 @@ import Foundation
 
 class GeneralMock: General {
     
-    static let product = ProductList.Product(productId: 785359, productName: "Fake Apple iPhone X id: 785359",
+    static let product = Product(productId: 785359, productName: "Fake Apple iPhone X id: 785359",
                                              productText: nil, productImage: nil,
                                              reviewInformation: nil, productImages: nil,
                                              salesPriceIncVat: 0.0)

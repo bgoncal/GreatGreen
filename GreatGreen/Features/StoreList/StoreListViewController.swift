@@ -25,7 +25,7 @@ class StoreListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = StoreListViewModel(productService: productService,
-                                       products: [ProductList.Product](),
+                                       products: [Product](),
                                        delegate: self)
         viewModel.getProductsPaginated()
         setupCollection(numberOfColumns: initialColumnNumber)

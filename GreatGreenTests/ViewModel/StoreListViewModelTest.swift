@@ -26,7 +26,7 @@ class StoreListViewModelTest: XCTestCase {
         productServiceMock = ProductServiceMock(api: apiMock, decoder: decoder, parser: parser,
                                         productListObj: GeneralMock.productList, productDetailsObj: GeneralMock.productDetails)
         viewControllerMock = StoreListViewControllerMock()
-        sut = StoreListViewModel(productService: productServiceMock, products: [ProductList.Product](), delegate: viewControllerMock)
+        sut = StoreListViewModel(productService: productServiceMock, products: [Product](), delegate: viewControllerMock)
     }
     
     func testGetProductsStartShouldShowLoader() {

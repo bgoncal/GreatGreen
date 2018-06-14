@@ -17,14 +17,20 @@ class CustomFlowLayout: UICollectionViewFlowLayout {
         setupLayout()
     }
     
-    func setup(numberOfColumns: Float) {
-        self.numberOfColumns = numberOfColumns
+    func setup(numberOfColumns: Float?) {
+        self.numberOfColumns = numberOfColumns ?? self.numberOfColumns
         setupLayout()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupLayout()
+    }
+    
+    func setupLayout() {
+        minimumInteritemSpacing = 1
+        minimumLineSpacing = 1
+        scrollDirection = .vertical
     }
     
     override var itemSize: CGSize {
@@ -36,11 +42,5 @@ class CustomFlowLayout: UICollectionViewFlowLayout {
             }
             return CGSize()
         }
-    }
-    
-    func setupLayout() {
-        minimumInteritemSpacing = 1
-        minimumLineSpacing = 1
-        scrollDirection = .vertical
     }
 }
